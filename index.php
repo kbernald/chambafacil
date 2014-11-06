@@ -7,16 +7,7 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
     require_once ("config.php"); 
     $submitted_email= ''; 
     if(!empty($_POST)){ 
-        $query = " 
-              SELECT 
-                id_usr, 
-                Pass_usr, 
-                semilla, 
-                Email_usr 
-            FROM usuario_usr 
-            WHERE 
-                Email_usr = :email 
-        "; 
+        $query = " SELECT id_usr, Pass_usr, semilla, Email_usr FROM usuario_usr WHERE Email_usr = :email "; 
         $query_params = array( 
             ':email' => $_POST['email'] 
         ); 
@@ -44,8 +35,8 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
             unset($row['semilla']); 
             unset($row['Pass_usr']);
             $_SESSION['user'] = $row;  
-            header("Location: home.php"); 
-            die("Redirecting to: home.php"); 
+            header("Location: postulante"); 
+            die("Redirecting to: postulante"); 
         } 
         else{ 
             header("Location: error_login.php"); 
