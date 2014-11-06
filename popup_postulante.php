@@ -87,8 +87,8 @@
         
         } 
         catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
-         header("Location: confirmacion.php"); 
-        die("Redirecting to confirmacion.php"); 
+         header("Location: postulante/confirmacion.php"); 
+        die("Redirecting to postulante/confirmacion.php"); 
         
     } 
        
@@ -189,4 +189,4 @@
                 </div>
             </div>
         </div>
-        <!-- -->   
+<!-- FIN CONTENIDO -->   

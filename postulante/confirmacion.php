@@ -4,13 +4,11 @@ $title = "Confirmacion de Registro";
 $metaD = "¿Buscas trabajo? aqui es muy facil";
 ?>
 <?php 
-require_once ("config.php");
-require ('inc/header.php'); 
-require ('inc/menu.php');
+require('inc/header.php'); 
+require_once('../config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
 ?>
-<!-- Content -->
-<div class="container">
+<!-- CONTENIDO -->
 
       <!-- Three columns of text below the carousel -->
       <div class="row">

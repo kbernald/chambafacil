@@ -7,16 +7,7 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
     require_once ("config.php"); 
     $submitted_email= ''; 
     if(!empty($_POST)){ 
-        $query = " 
-            SELECT 
-                id, 
-                password, 
-                salt, 
-                email 
-            FROM users 
-            WHERE 
-                email = :email 
-        "; 
+         $query = " SELECT id_usr, Pass_usr, semilla, Email_usr FROM usuario_usr WHERE Email_usr = :email "; 
         $query_params = array( 
             ':email' => $_POST['email'] 
         ); 
@@ -51,9 +42,56 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
         } 
     } 
 ?>
-<?php 
-require("inc/header.php"); 
-?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+ <meta charset="utf-8">   
+    <meta name="description" content="<?php error_reporting(0);if(isset($metaD) && !empty($metaD)) {
+echo $metaD;
+}
+else {
+ echo "Bolsa de trabajo virtual de Perú";
+} ?>" />
+
+    <title><?php if(isset($title) && !empty($title)) {
+echo $title;
+}
+else {
+echo "Chambafacil | Buscar trabajo nunca fue tan facil";
+} ?></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Loading Bootstrap -->
+        <link href="assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/datepicker.css" rel="stylesheet">
+        <!-- Loading Flat UI -->
+        <link href="assets/css/flat-ui.css" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <!-- Loading Font-Awesome -->
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Loading Estilo Chambafacil -->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+        <!--[if lt IE 9]>
+          <script src="assets/js/vendor/html5shiv.js"></script>
+          <script src="assets/js/vendor/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>                
+        <script type="text/javascript" src="js/jquery-1.4.4.js"></script>
+               <script type="text/javascript">
+$(document).ready(function () {
+	$('#logeo').click(function(){
+		password= $('#login-pass').val();
+		document.cookie="pass="+password;
+
+	});
+            
+});
+        
+        </script>
+	
+	</head>
+<body>  
   <!--   navbar --> 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -67,7 +105,7 @@ require("inc/header.php");
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" width="150"></a>
+                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" width="140"></a>
 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -87,16 +125,21 @@ require("inc/header.php");
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-                    </ul> -->
+                    </ul> --> 
 
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a href="#"  class="dropdown-toggle" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in">&nbsp;</i>Iniciar Sesión</a>
-                        </li>
+                        
                         <li class="dropdown">
                             <!-- Button trigger modal -->
-                            <button id="registrarme" class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#register"><i class="fa fa-pencil-square-o">&nbsp;</i>Registrarse</button>
+                            <button id="postulante" class="btn btn-navbar btn-primary" data-toggle="modal" data-target="#pop-postulante"><i class="fa fa-user">&nbsp;</i>Postulante</button>
                         </li>
+                         <li>&nbsp;</li>
+                        <li>&nbsp;</li>
+                        <li class="dropdown">
+                           <button id="empresa"  class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#pop-empresa"><i class="fa fa-building">&nbsp;</i>Empresa</button>
+                        </li>
+                        
+                        
                     </ul>
                     <form class="navbar-form navbar-right" action="#" role="search">
       <div class="form-group">
@@ -133,8 +176,8 @@ require("inc/header.php");
     </div>
       <!-- /END THE FEATURETTES -->
 <?php 
-require ('login.php');  //LLAMA AL BOTON LOGIN 
-require ('registro.php');  //LLAMA AL BOTON REGISTRO  
+require ('popup_postulante.php');  //LLAMA AL BOTON LOGIN 
+require ('popup_empresa.php');  //LLAMA AL BOTON REGISTRO  
 ?>
 
 
@@ -148,43 +191,45 @@ require ('registro.php');  //LLAMA AL BOTON REGISTRO
         <div class="row">
           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         
-                <h3 class="footer-title">Información</h3>
-          <ul>
-            <li><a>Ayuda</a></li>
-            <li><a>Preguntas Frecuentes</a></li>
-            <li><a>Términos y condiciones del sitio</a></li>
-            <li><a>Búsqueda de trabajo avanzada</a></li>
-            <li><a>Nuestra Compañía</a></li> 
+                   <h3 class="footer-title">Mi cuenta</h3>
+          <ul class="footer-list">
+            <li><a href="#">Regístrate</a></li>
+            <li><a href="#">Actualiza tus datos</a></li>
+            <li><a href="#">Cambia tu contraseña</a></li>
+            <li><a href="#">¿Olvidaste tu contraseña?</a></li>
+            <li><a href="#">Buscar chamba</a></li> 
+            <li>&nbsp;</li>
           </ul>
+
         </div> 
             
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                         
-                 <h3 class="footer-title">Información</h3>
-          <ul>
-            <li><a>Ayuda</a></li>
-            <li><a>Preguntas Frecuentes</a></li>
-            <li><a>Términos y condiciones del sitio</a></li>
-            <li><a>Búsqueda de trabajo avanzada</a></li>
-            <li><a>Nuestra Compañía</a></li> 
+                <h3 class="footer-title">Sobre nosotros</h3>
+          <ul class="footer-list">
+            <li><a href="#">¿Quiénes somos?</a></li>
+            <li><a href="#">Nuestro compromiso</a></li>
+            <li><a href="#">Términos de uso</a></li>
+            <li><a href="#">Politica de privacidad</a></li>
+            <li><a href="#">Politica de publicación</a></li> 
+            <li>&nbsp;</li>
           </ul>
+
         </div> 
 
-           <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-            <div class="footer-banner">
-                            
-                <h3 class="footer-title">Right Footer Widget</h3>
-                  <ul>
-                    <li>List item here </li>
-                    <li>List item here </li>
-                    <li>List item with <a href="#">link</a> </li>
-                    <li>List item here </li>
-                    <li>List item here </li>
-                    <li>List item here </li>
-                  </ul>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        
+                <h3 class="footer-title">Servicio al usuario</h3>
+          <ul class="footer-list">
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Contáctanos</a></li>
+            <li><a href="#">Libro de reclamaciones</a></li> 
+            <li>&nbsp;</li>
+          </ul>
 
-                        </div>
-          </div>
+        </div> 
+            
+
         </div>
       </div>
     <div class="copyright">

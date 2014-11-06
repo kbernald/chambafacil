@@ -1,8 +1,3 @@
-
-<!-- Author: Michael Milstead / Mode87.com
-     for Untame.net
-     Bootstrap Tutorial, 2013
--->
 <?php 
 require('inc/header.php'); 
 require('inc/menu.php'); 

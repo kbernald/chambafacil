@@ -1,15 +1,9 @@
 <?php 
 require('inc/header.php'); 
-require('inc/menu.php'); 
+require_once('../config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
 ?>
-
- <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-<?php require("inc/sidebar.php"); ?>
-          </div>
- <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">  
+<!-- CONTENIDO -->
      <form method="post" action="">
      <center><h3>Nueva Oferta</h3> </center>
      <div class="row">
