@@ -234,7 +234,7 @@ $(document).ready(function () {
         <div class="col-lg-4 col-sm-4 col-sm-4 col-xs-12">
           <img class="img-circle" src="assets/img/buscador.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
           <h2>Objetivos</h2>
-          <p class="text-justify">Planificar y desarrollar las políticas de acción que permitan impulsar iniciativas empresariales y de empleo en el Perú, integrando actuaciones y programas en los ámbitos de formación ocupacional, inserción socio laboral de personas en desempleo y de promoción de la iniciativa empresarial.</p>
+          <p class="text-justify">Planificar y desarrollar las políticas de acción que permitan impulsar iniciativas empresariales y de empleo en el Perú, integrando actuaciones y programas en los ámbitos de formación ocupacional.</p>
           <!--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
