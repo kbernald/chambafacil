@@ -1,12 +1,4 @@
-<?php
-    require("config.php");
-    if(empty($_SESSION['user'])) 
-    {
-        header("Location: index.php");
-        die("Redirecting to index.php"); 
-    }
-?>
-  <!--   navbar --> 
+<!--   navbar --> 
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
             <div class="container-fluid">
@@ -19,7 +11,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="assets/img/logo.png" width="150"></a>
+                    <a class="navbar-brand" href="#"><img src="../assets/img/logo.png" width="150"></a>
 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
