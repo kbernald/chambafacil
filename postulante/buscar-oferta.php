@@ -1,21 +1,10 @@
-<?php
-$page = "home";
-$title = "Chambafacil";
-$metaD = "¿Buscas trabajo? aqui es muy facil";
-?>
-   
 <?php 
-require ('inc/header.php'); //LLAMA A LA CABEZERA HTML HEAD Y BODY 
-include ('inc/menu.php');  //LLAMA AL MENU DE LA PAGINA
+require('inc/header.php'); 
+require_once('../config.php');
+$_SESSION['clave']=$_COOKIE['pass'];
 ?>
-
-<!-- Content -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <?php require ('inc/sidebar.php'); ?>
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<!-- CONTENIDO -->
+ 
             <h3>Busqueda de Oferta de Trabajo</h3>  
                <form method="post" action="">
        
@@ -256,9 +245,7 @@ include ('inc/menu.php');  //LLAMA AL MENU DE LA PAGINA
               </tbody>
             </table>
           </div>-->
-        </div> 
-      </div>
-    </div>
+    
 <!-- -->
 <?php
 require_once 'inc/footer.php';

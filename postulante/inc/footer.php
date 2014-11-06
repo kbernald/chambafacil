@@ -1,13 +1,16 @@
+    </div> 
+      </div>
+    </div>
 <?php
 require ('login.php');  //LLAMA AL BOTON LOGIN 
 ?>
 
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
-<script src="assets/js/vendor/jquery.min.js"></script>
+<script src="../assets/js/vendor/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/js/flat-ui.min.js"></script>
-<script src="assets/js/application.js"></script>
-<script src="assets/js/bootstrap-datepicker.js"></script>
+<script src="../assets/js/flat-ui.min.js"></script>
+<script src="../assets/js/application.js"></script>
+<script src="../assets/js/bootstrap-datepicker.js"></script>
 <script>
 if (top.location != location) {
 top.location.href = document.location.href ;

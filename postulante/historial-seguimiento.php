@@ -1,23 +1,9 @@
-
-<?php
-$page = "home";  // NOMBRE DEL PHP
-$title = "Chambafacil"; //TITULO DE LA PAGINA
-$metaD = "¿Buscas trabajo? aqui es muy facil"; //DESCRIPCION DE LA PAGINA
-?>
-
 <?php 
-require ('inc/header.php'); //LLAMA A LA CABEZERA HTML HEAD Y BODY 
-include ('inc/menu.php');  //LLAMA AL MENU DE LA PAGINA
+require('inc/header.php'); 
+require_once('../config.php');
+$_SESSION['clave']=$_COOKIE['pass'];
 ?>
-
-
-<!-- Content -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
-            <?php require ('inc/sidebar.php'); ?> <!-- LLAMA A LA BARRA IZQUIRDA MENU SIDEBAR -->
-        </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+<!-- CONTENIDO -->
          <div class="row">
                     <div class="container">
 	<div class="row clearfix">
