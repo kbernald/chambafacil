@@ -18,7 +18,7 @@ require_once '../database.php';
 <!-- CONTENIDO -->
  
             <h3>Busqueda de Oferta de Trabajo</h3>  
-               <form method="post" action="">
+               <form method="post" action="postular.php">
        
       <div class="row">
   <div class="col-lg-6">
@@ -60,7 +60,7 @@ require_once '../database.php';
             <div class="input-group">
               <input type="text" class="form-control">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Buscar</button>
+                <button class="btn btn-default" type="submit">Buscar</button>
               </span>
             </div><!-- /input-group -->
           </div><!-- /.form-group -->
