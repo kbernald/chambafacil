@@ -1,10 +1,37 @@
-<?php 
-require('inc/header.php'); 
-require_once('../config.php');
-$_SESSION['clave']=$_COOKIE['pass'];
+<?php
+$page = "home";
+$title = "Chambafacil";
+$metaD = "¿Buscas trabajo? aqui es muy facil";
 ?>
-<!-- CONTENIDO -->
+   
+<?php 
+require_once ('../database.php');
+    $result;
  
+    $conn = dbConnect();
+    // Create the query
+    $sql = 'SELECT * FROM empresa_emp';
+    // Create the query and asign the result to a variable call $result
+    $result = $conn->query($sql);        
+    // Extract the values from $result
+    $rows = $result->fetchAll();
+    // Since the values are an associative array we use foreach to extract the values from $rows
+    // ####### We format the result in a table using Heredoc. ####### 
+
+?>
+
+<?php
+require ('inc/header.php'); //LLAMA A LA CABEZERA HTML HEAD Y BODY 
+include ('inc/menu.php');  //LLAMA AL MENU DE LA PAGINA
+?>
+
+<!-- Content -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+            <?php require ('inc/sidebar.php'); ?>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
             <h3>Busqueda de Oferta de Trabajo</h3>  
                <form method="post" action="">
        
@@ -63,50 +90,30 @@ $_SESSION['clave']=$_COOKIE['pass'];
       <!-- Table -->
       <table class="table">
         <thead>
-          <tr>
-            <th>Logo</th>
-            <th>Nombre de la Empresa</th>
-            <th>Fecha</th>
-            <th>Cargo</th>
-            <th>Lugar</th>
-            <th>Tipo</th>
-            <th>Categoria</th>
-            <th>Postular</th>
-          </tr>
+            <tr>
+                <th>LOGO</th>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Telefono</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><img src="holder.js/50x50/text:Logo"></td>
-            <td>Sodimac</td>    
-            <td>15/10/2014</td>
-            <td>Practicante de Sistemas</td>
-            <td>Lima</td>
-            <td>Full Time</td>
-            <td>Servicios</td>
-            <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
-          </tr>
-          <tr>
-            <td><img src="holder.js/50x50/text:Logo"></td>
-            <td>Sodimac</td>    
-            <td>15/10/2014</td>
-            <td>Practicante de Sistemas</td>
-            <td>Lima</td>
-            <td>Full Time</td>
-            <td>Servicios</td>
-            <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
-          </tr>
+<?php
+        foreach ($rows as $row) {
+   ?>
             <tr>
-            <td><img src="holder.js/50x50/text:Logo"></td>
-            <td>Sodimac</td>    
-            <td>15/10/2014</td>
-            <td>Practicante de Sistemas</td>
-            <td>Lima</td>
-            <td>Full Time</td>
-            <td>Servicios</td>
-            <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
-          </tr>
-        </tbody>
-      </table>
+                <td><img src="holder.js/50x50/text:Logo"></td>
+                <td><?php echo $row['id_emp'] ?></td>
+                <td><?php echo $row['ruc_emp'] ?></td>
+                <td><?php echo $row['Nombre_emp'] ?></td>
+                <td><?php echo $row['Rubro_emp'] ?></td>
+                <td><?php echo $row['dir_emp'] ?></td>
+                <td><?php echo $row['Tray_emp'] ?></td>
+                <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td> 
+            </tr>
+        <?php } ?>
+    </table>
     </div>  
             
          <!-- <h1 class="page-header">Busca oferta de trabajo</h1>
@@ -245,7 +252,9 @@ $_SESSION['clave']=$_COOKIE['pass'];
               </tbody>
             </table>
           </div>-->
-    
+        </div> 
+      </div>
+    </div>
 <!-- -->
 <?php
 require_once 'inc/footer.php';
