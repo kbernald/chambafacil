@@ -3,6 +3,18 @@ require('inc/header.php');
 require_once('../config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
 ?>
+      <?php
+require_once '../database.php';
+    $result;
+ 
+    $conn = dbConnect();
+    // Create the query
+    $sql = 'SELECT * FROM empresa_emp';
+    // Create the query and asign the result to a variable call $result
+    $result = $conn->query($sql);        
+    // Extract the values from $result
+    $rows = $result->fetchAll();
+?>
 <!-- CONTENIDO -->
  
             <h3>Busqueda de Oferta de Trabajo</h3>  
@@ -58,55 +70,37 @@ $_SESSION['clave']=$_COOKIE['pass'];
      <p>&nbsp;</p>
      <div class="panel panel-default">
       <!-- Default panel contents -->
-      <div class="panel-heading">Resultados de Oferta de Trabajo </div>
-
+      <div class="panel-heading">Resultados de Oferta de Trabajo </div> 
       <!-- Table -->
-      <table class="table">
+    <table class="table">
         <thead>
-          <tr>
-            <th>Logo</th>
-            <th>Nombre de la Empresa</th>
-            <th>Fecha</th>
-            <th>Cargo</th>
-            <th>Lugar</th>
-            <th>Tipo</th>
-            <th>Categoria</th>
-            <th>Postular</th>
-          </tr>
+            <tr> 
+                <th>LOGO</th>
+                <th>ID</th>
+                <th>RUC</th>
+                <th>NOMBRE DE LA EMPRESA</th>
+                <th>RUBRO</th>
+                <th>DIRECCION</th>
+                <th>TRAYECTORIA</th>
+            </tr>
         </thead>
         <tbody>
-          <tr>
-            <td><img src="holder.js/50x50/text:Logo"></td>
-            <td>Sodimac</td>    
-            <td>15/10/2014</td>
-            <td>Practicante de Sistemas</td>
-            <td>Lima</td>
-            <td>Full Time</td>
-            <td>Servicios</td>
-            <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
-          </tr>
-          <tr>
-            <td><img src="holder.js/50x50/text:Logo"></td>
-            <td>Sodimac</td>    
-            <td>15/10/2014</td>
-            <td>Practicante de Sistemas</td>
-            <td>Lima</td>
-            <td>Full Time</td>
-            <td>Servicios</td>
-            <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
-          </tr>
+        <?php
+            foreach ($rows as $row) {   
+        ?>
             <tr>
-            <td><img src="holder.js/50x50/text:Logo"></td>
-            <td>Sodimac</td>    
-            <td>15/10/2014</td>
-            <td>Practicante de Sistemas</td>
-            <td>Lima</td>
-            <td>Full Time</td>
-            <td>Servicios</td>
-            <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
-          </tr>
+             <td><img src="holder.js/50x50/text:Logo"></td>
+                <td><?php echo $row['id_emp']; ?></td>
+                <td><?php echo $row['ruc_emp']; ?></td>
+                <td><?php echo $row['Nombre_emp']; ?></td>
+                <td><?php echo $row['Rubro_emp']; ?></td>
+                <td><?php echo $row['dir_emp']; ?></td>
+                <td><?php echo $row['Tray_emp']; ?></td>
+                 <td><button class="btn btn-navbar btn-danger" data-toggle="modal" data-target="#postular">Postular</button></td>  
+            </tr>
+        <?php } ?>
         </tbody>
-      </table>
+    </table>
     </div>  
             
          <!-- <h1 class="page-header">Busca oferta de trabajo</h1>
