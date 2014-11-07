@@ -4,7 +4,7 @@ require_once('../config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
 ?>
       <?php
-require_once '../database.php';
+require_once ('../database.php');
     $result;
  
     $conn = dbConnect();
