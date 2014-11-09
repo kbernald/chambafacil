@@ -1,12 +1,13 @@
 <?php
-$page = "home";
-$title = "Confirmacion de Registro";
-$metaD = "¿Buscas trabajo? aqui es muy facil";
-?>
-<?php 
+require("../config.php");
+if(empty($_SESSION['user'])) 
+{
+header("Location: ../index.php");
+die("Redirecting to index.php"); 
+}
 require('inc/header.php'); 
-require_once('../config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
+$_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
 <!-- CONTENIDO -->
 

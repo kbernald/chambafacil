@@ -1,13 +1,13 @@
-
-<!-- Author: Michael Milstead / Mode87.com
-     for Untame.net
-     Bootstrap Tutorial, 2013
--->
-<?php 
+<?php
+require("../config.php");
+if(empty($_SESSION['user'])) 
+{
+header("Location: ../index.php");
+die("Redirecting to index.php"); 
+}
 require('inc/header.php'); 
-require('inc/menu.php'); 
-require_once('config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
+$_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
 
  <div class="container-fluid">
