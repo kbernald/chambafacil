@@ -35,7 +35,7 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
      <div class="row">
   <div class="col-lg-6">
       <label class="title">Nombres:<span class="required">*</span></label>
-        <input id='nombre' name='nombre'type="text" placeholder="..." class="form-control" />
+        <input id='nombre' name='nombre'type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Fecha de Nacimiento:<span class="required">*</span></label>
@@ -46,11 +46,11 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
          <div class="row">
   <div class="col-lg-6">
       <label class="title">Apellido Paterno:<span class="required">*</span></label>
-        <input id='ape_pat' name='ape_pat' type="text" placeholder="..." class="form-control" />
+        <input id='ape_pat' name='ape_pat' type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Apellido Materno:<span class="required">*</span></label>
-        <input id='ape_mat' name='ape_mat' type="text" placeholder="..." class="form-control" />
+        <input id='ape_mat' name='ape_mat' type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->     
       <div class="row">
@@ -120,7 +120,7 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
   </div><!-- /.col-lg-6 -->
   <div class="col-lg-6">
       <label class="title">Departamento:<span class="required">*</span></label>
-        <div class="form-group">
+          <div class="form-group">
             <select id="cbo_departamento" disabled="true" data-toggle="select" class="form-control select select-default">
     <option value="0">--SELECCIONAR--</option>
                 <?php 
@@ -172,17 +172,17 @@ function habilitarCboDistrito(){
           <div class="row">
   <div class="col-lg-12">
       <label class="title">Direcci&oacute;n:<span class="required">*</span></label>
-        <input id='direccion' type="text" placeholder="..." class="form-control" />
+        <input id='direccion' type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
                 <div class="row">
   <div class="col-lg-6">
       <label class="title">Telefono Celular:<span class="required">*</span></label>
-        <input id='tel_celular' type="text" placeholder="..." class="form-control" />
+        <input id='tel_celular' type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Telefono Fijo:<span class="required">*</span></label>
-        <input id='tel_fijo' type="text" placeholder="..." class="form-control" />
+        <input id='tel_fijo' type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->  
   
@@ -205,6 +205,21 @@ function habilitarCboDistrito(){
                 <option value="0">--SELECCIONAR--</option>
                 <option value="1">Peru</option>
                 <option value="2">Chile</option>
+            </select>
+          </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->  
+         
+         <div class="row">
+ 
+   <div class="col-lg-6">
+             <label class="title">Categoria:<span class="required">*</span></label>
+        <div class="form-group">
+            <select id='pais_nac' data-toggle="select" class="form-control select select-default">
+                <option value="0">--SELECCIONAR--</option>
+                <option value="1">Administracion/Oficina</option>
+                <option value="2">Recursos Humanos</option>
+                <option value="3">Otros</option>
             </select>
           </div>
   </div><!-- /.col-lg-6 -->

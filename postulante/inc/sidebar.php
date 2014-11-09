@@ -27,6 +27,12 @@
                                         <a href="cursos-especializacion.php">Grados de Estudio y Cursos de Especialización</a>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-caret-right">&nbsp;</i>
+                                        <a href="referencia-personal.php">Referencia Personal</a>
+                                    </td>
+                                </tr>
                             </table>
                         </div>
                     </div>
@@ -69,5 +75,6 @@
                         </div>
                     </div>
                 </div>
-     
+
+     </div>
       </div>

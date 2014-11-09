@@ -16,22 +16,30 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
      <div class="row">
   <div class="col-lg-6">
       <label class="title">Estudio realizado:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+         <div class="form-group">
+            <select data-toggle="select" class="form-control select select-default">
+    <option value="0">--SELECCIONAR--</option>
+            </select>
+          </div>
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Especialidad:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
   </div><!-- /.row -->      
          
          <div class="row">
   <div class="col-lg-6">
-      <label class="title">Nombre de la Institucion:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+      <label class="title">Nombre del Instituto:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Estado:<span class="required">*</span></label>
-       <input type="text" placeholder="..." class="form-control" />
+        <div class="form-group">
+            <select data-toggle="select" class="form-control select select-default">
+    <option value="0">--SELECCIONAR--</option>
+            </select>
+          </div>
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->    
      
@@ -140,22 +148,30 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
      <div class="row">
   <div class="col-lg-6">
       <label class="title">Estudio realizado:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+       <div class="form-group">
+            <select data-toggle="select" class="form-control select select-default">
+    <option value="0">--SELECCIONAR--</option>
+            </select>
+          </div>
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Especialidad:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->      
          
          <div class="row">
   <div class="col-lg-6">
-      <label class="title">Institucion:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+      <label class="title">Nombre de Instituto:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Estado:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+       <div class="form-group">
+            <select data-toggle="select" class="form-control select select-default">
+    <option value="0">--SELECCIONAR--</option>
+            </select>
+          </div>
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->    
      

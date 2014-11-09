@@ -9,134 +9,125 @@ require('inc/header.php');
 $_SESSION['clave']=$_COOKIE['pass'];
 $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
-<!-- CONTENIDO -->
+<!--CONTENIDO-->
 
      <form method="post" action="">
-     <h3>Información Personal</h3> 
+     <h3>Referencia Personal</h3> 
      <div class="row">
   <div class="col-lg-6">
-      <label class="title">Nombres:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+       <label class="title">Nombres:<span class="required">*</span></label>
+       <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
-       <label class="title">Fecha de Nacimiento:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+       <label class="title">Apellidos:<span class="required">*</span></label>
+       <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->        
+</div><!-- /.row -->      
+         
+         <div class="row">
+  <div class="col-lg-6">
+      <label class="title">E-mail:<span class="required">*</span></label>
+      <input type="text" placeholder="" class="form-control" />
+  </div><!-- /.col-lg-6 -->
+   <div class="col-lg-6">
+       <label class="title">Telefono:<span class="required">*</span></label>
+       <input type="text" placeholder="" class="form-control" />
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->    
      
          <div class="row">
   <div class="col-lg-6">
-      <label class="title">Apellido Paterno:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+      <label class="title">Relacion:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
-       <label class="title">Apellido Materno:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+       <label class="title">Puesto:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->     
       <div class="row">
-  <div class="col-lg-6">
-      <label class="title">Estado Civil:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-    <option value="0">--SELECCIONAR--</option>
-    <option value="1">Soltero</option>
-    <option value="2">Casado</option>
-    <option value="3">Viudo</option>
-    <option value="4">Divorciado</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
+
    <div class="col-lg-6">
-       <label class="title">Sexo:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-                <option value="0">--SELECCIONAR--</option>
-                <option value="1">Hombre</option>
-                <option value="2">Mujer</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->     
-      <div class="row">
-  <div class="col-lg-6">
-      <label class="title">Tipo de Documento:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-    <option value="0">--SELECCIONAR--</option>
-    <option value="1">DNI</option>
-    <option value="2">Carnet Universitario</option>
-    <option value="3">Libreta Militar</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-       <label class="title">Nro. de Documento:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->   
-         <div class="row">
-   <div class="col-lg-6">
-       <label class="title">Pais:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-                <option value="0">--SELECCIONAR--</option>
-                <option value="1">Perú</option>
-                <option value="2">Bolivia</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
-  <div class="col-lg-6">
-      <label class="title">Departamento:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-    <option value="0">Lima</option>
-    <option value="1">Ica</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->  
-          <div class="row">
-  <div class="col-lg-12">
-      <label class="title">Dirección:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->
-                <div class="row">
-  <div class="col-lg-6">
-      <label class="title">Telefono Celular:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
-  </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-       <label class="title">Telefono Fijo:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->  
-  
-                <div class="row">
-  <div class="col-lg-6">
-      <label class="title">Situacion Actual:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-    <option value="0">Seleccionar</option>
-    <option value="1">Trabajador Dependiente</option>
-    <option value="2">Trabajador Independiente</option>
-    <option value="3">Desempleado</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-              <div class="form-group">
-              <label for="exampleInputFile">Subir Foto</label>
-              <input type="file" id="exampleInputFile">
-              <p class="help-block">Foto de Perfil (400 x 400 px).</p>
+       <div class="form-group">
+             <label class="title">Institucion:<span class="required">*</span></label>
+             <input type="text" placeholder="" class="form-control" />
             </div>
   </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->  
+            <div class="col-lg-6">
+      <label class="title">Referencia de Estudio:<span class="required">*</span></label>
+        <div class="form-group">
+            <select data-toggle="select" class="form-control select select-default">
+    <option value="0">--SELECCIONAR--</option>
+            </select>
+          </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->   
+    <button data-toggle="dropdown" class="btn btn-danger" type="submit"><i class="fa fa-plus-circle">&nbsp;</i>Agregar</button>
    </form>
-</div>
-</div>
-</div>
-<?php 
+     <p>&nbsp;</p>
+     <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading">Mis especializaciones </div>
+
+      <!-- Table -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Relacion</th>
+            <th>Puesto</th>
+            <th>Institucion</th>
+            <th>Referencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Programacion</td>
+            <td>Ingenieria de Sistemas</td>
+            <td>Universidad Nacional de Ingenieria</td>
+            <td>Truncado</td>
+            <td>18/09/2001</td>
+            <td>30/10/2001</td>
+            <td>Basico</td>
+            <td><button type="button" class="btn btn-info"><i class="fa fa-certificate"></i></button></td>
+            <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
+            <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Programacion</td>
+            <td>Ingenieria de Sistemas</td>
+            <td>Universidad Nacional de Ingenieria</td>
+            <td>Truncado</td>
+            <td>18/09/2001</td>
+            <td>30/10/2001</td>
+            <td>Basico</td>
+            <td><button type="button" class="btn btn-info"><i class="fa fa-certificate"></i></button></td>
+            <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
+            <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
+          </tr>
+            <tr>
+            <td>3</td>
+            <td>Programacion</td>
+            <td>Ingenieria de Sistemas</td>
+            <td>Universidad Nacional de Ingenieria</td>
+            <td>Truncado</td>
+            <td>18/09/2001</td>
+            <td>30/10/2001</td>
+            <td>Basico</td>
+            <td><button type="button" class="btn btn-info"><i class="fa fa-certificate"></i></button></td>
+            <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
+            <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <?php 
 require('inc/footer.php');  
 ?>
