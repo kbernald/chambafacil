@@ -24,13 +24,7 @@
                                 <tr>
                                     <td>
                                         <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="cursos-especializacion.php">Cursos de Especialización</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="grado-estudio.php">Grado de Estudio</a>
+                                        <a href="cursos-especializacion.php">Grados de Estudio y Cursos de Especialización</a>
                                     </td>
                                 </tr>
                             </table>

@@ -138,9 +138,9 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
         </tbody>
       </table>
     </div>
-</div>
-</div>
-</div>
+
+   
+
 <?php 
 require('inc/footer.php');  
 ?>
