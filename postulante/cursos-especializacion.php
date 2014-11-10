@@ -46,11 +46,11 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
          <div class="row">
   <div class="col-lg-6">
       <label class="title">Fecha de Inicio:<span class="required">*</span></label>
-        <input type="text" class="form-control" value="MM/DD/AA" data-date-format="mm/dd/yy">
+        <input type="text" class="form-control" value="02/16/12" data-date-format="mm/dd/yy">
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Fecha de Fin:<span class="required">*</span></label>
-        <input type="text" class="form-control" value="MM/DD/AA" data-date-format="mm/dd/yy">
+        <input type="text" class="form-control" value="02/16/12" data-date-format="mm/dd/yy">
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->     
       <div class="row">
@@ -178,11 +178,11 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
          <div class="row">
   <div class="col-lg-6">
       <label class="title">Fecha de Inicio:<span class="required">*</span></label>
-        <input type="text" class="form-control" value="MM/DD/AA" data-date-format="mm/dd/yy">
+        <input type="text" class="form-control" value="02/16/12" data-date-format="mm/dd/yy">
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
        <label class="title">Fecha de Fin:<span class="required">*</span></label>
-        <input type="text" class="form-control" value="MM/DD/AA" data-date-format="mm/dd/yy">
+        <input type="text" class="form-control" value="02/16/12" data-date-format="mm/dd/yy">
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->     
       <div class="row">

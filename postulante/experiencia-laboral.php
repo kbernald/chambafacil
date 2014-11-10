@@ -15,12 +15,12 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
      <h3>Experiencias Laborales</h3> 
      <div class="row">
   <div class="col-lg-6">
-      <label class="title">Titulo / Puesto:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+      <label class="title">Puesto:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
-       <label class="title">Nomb. de la Empresa:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
+       <label class="title">Empresa:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->        
      
@@ -43,39 +43,24 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
             </select>
           </div>
   </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-       <label class="title">Cargo:<span class="required">*</span></label>
-        <div class="form-group">
-            <select data-toggle="select" class="form-control select select-default">
-                <option value="0">--SELECCIONAR--</option>
-            </select>
-          </div>
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->     
-      <div class="row">
-  <div class="col-lg-6">
+          
+          <div class="col-lg-6">
       <label class="title">Roles y Funciones:<span class="required">*</span></label>
     
             <textarea class="form-control" rows="3"></textarea>
  
   </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-       <label class="title">Motivo de cese del trabajo:<span class="required">*</span></label>
-        <textarea class="form-control" rows="3"></textarea>
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row --> 
+</div><!-- /.row -->     
           <div class="row">
    <div class="col-lg-6">
        <div class="form-group">
-              <label for="exampleInputFile">Subir documento</label>
+              <label for="exampleInputFile">Certificado de Trabajo</label>
               <input type="file" id="exampleInputFile">
               <p class="help-block">Seleccione una Imagen, PDF o DOC.</p>
             </div>
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->       
-         
-    <p>&nbsp;</p>
-    <button data-toggle="dropdown" class="btn btn-success dropdown-toggle" type="submit">Agregar <span class="caret"></span></button>
+         <button data-toggle="dropdown" class="btn btn-danger" type="submit"><i class="fa fa-plus-circle">&nbsp;</i>Agregar información</button>
    </form>
      <p>&nbsp;</p>
      <div class="panel panel-default">
@@ -107,7 +92,7 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
             <td>30/10/2001</td>
             <td>Recursos Humanos</td>
             <td>Administracion</td>
-            <td><button type="button" class="btn btn-info"><i class="fa fa-certificate"></i></button></td>
+            <td><button type="button" class="btn btn-info"><i class="fa fa-file-pdf-o"></i></button></td>
             <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
             <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
           </tr>
@@ -119,7 +104,7 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
             <td>30/10/2001</td>
             <td>Recursos Humanos</td>
             <td>Administracion</td>
-            <td><button type="button" class="btn btn-info"><i class="fa fa-certificate"></i></button></td>
+            <td><button type="button" class="btn btn-info"><i class="fa fa-file-pdf-o"></i></button></td>
             <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
             <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
           </tr>
@@ -131,7 +116,7 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
             <td>30/10/2001</td>
             <td>Recursos Humanos</td>
             <td>Administracion</td>
-            <td><button type="button" class="btn btn-info"><i class="fa fa-certificate"></i></button></td>
+            <td><button type="button" class="btn btn-info"><i class="fa fa-file-pdf-o"></i></button></td>
             <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
             <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
           </tr>

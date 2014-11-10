@@ -16,7 +16,7 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
    <div class="row">
    <div class="col-lg-6">
        <div class="foto-perfil">
-        <img data-src="holder.js/400x400" class="img-thumbnail" alt="400x400" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2VlZSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjEwMCIgeT0iMTAwIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEzcHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+MjAweDIwMDwvdGV4dD48L3N2Zz4=" style="width: 450px; height: 300px;">
+        <img src="holder.js/500x300">
        </div>
               <div class="form-group">
                   
@@ -242,7 +242,8 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
           </div>
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->  
-         <button  type="submit" id='save_datos' name='save_datos' class="btn btn-success">Guardar</button>
+         <button  type="submit" id='save_datos' name='save_datos' class="btn btn-success"><i class="fa fa-save">&nbsp;</i>Guardar</button>&nbsp;&nbsp;
+         <button name='edit_datos' class="btn btn-danger"><i class="fa fa-save">&nbsp;</i>Editar</button>
    </form>
 </div>
 </div>

@@ -45,7 +45,7 @@
   </button>
   <ul class="dropdown-menu dropdown-menu-inverse" role="menu">
     <li><a href="#">Editar Perfil</a></li>
-    <li><a href="cambiar-contra.php">Recuperar Contraseña</a></li>
+    <li><a href="cambiar-contra.php">Cambiar Contraseña</a></li>
     <li><a href="#">Configuracion</a></li>
     <li class="divider"></li>
     <li><a href="logout.php"  class="dropdown-toggle"><i class="fa fa-sign-out">&nbsp;</i>Cerrar Sesión</a></li>

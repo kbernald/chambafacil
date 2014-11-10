@@ -10,7 +10,7 @@ $_SESSION['clave']=$_COOKIE['pass'];
 $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
 <!--CONTENIDO-->
-     <h3>Seguimiento de Oferta</h3> 
+     <h3>Seguimiento de Postulacion</h3> 
 
      <p>&nbsp;</p>
      <div class="panel panel-default">

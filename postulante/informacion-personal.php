@@ -218,7 +218,8 @@ function habilitarCboDistrito(){
           </div>
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->  
-         <button  type="submit" id='save_datos' name='save_datos' class="btn btn-submit">Guardar</button>
+         <button  type="submit" id='save_datos' name='save_datos' class="btn btn-submit">Guardar</button>&nbsp;&nbsp;
+         <button  type="submit" id='save_datos' name='save_datos' class="btn btn-submit">Editar</button>
    </form>
 </div>
 </div>
