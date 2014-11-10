@@ -18,13 +18,13 @@
                                 <tr>
                                     <td>
                                         <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="experiencia-laboral.php">Experiencia Laboral</a>
+                                        <a href="cursos-especializacion.php">Grados de Estudio y Cursos de Especialización</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="cursos-especializacion.php">Grados de Estudio y Cursos de Especialización</a>
+                                        <a href="experiencia-laboral.php">Experiencia Laboral</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -50,27 +50,22 @@
                                 <tr>
                                     <td>
                                         <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="buscar-oferta.php">Buscar empleo</a>
+                                        <a href="buscar-oferta.php">Buscar oferta</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="lista-empresas.php">Lista de Empresas</a>
+                                        <a href="seguimiento-oferta.php">Seguimiento de  Ofertas</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="historial-seguimiento.php">Historial de postulacion</a>
+                                        <a href="seguimiento-postulacion.php">Seguimiento de postulacion</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>
-                                        <i class="fa fa-caret-right">&nbsp;</i>
-                                        <a href="recomendacion-oferta.php">Recomendación de Ofertas</a>
-                                    </td>
-                                </tr>
+                                
                             </table>
                         </div>
                     </div>
