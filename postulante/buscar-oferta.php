@@ -93,12 +93,13 @@ echo '<td>'. $row['id_ciu'] . '</td>';
 echo '<td>'. $row['id_tiph'] . '</td>';
 echo '<td>'. $row['id_per'] . '</td>';
 echo '<td>';
-echo '<a class="btn btn-warning" href="ver_alumno.php?id='.$row['id_oft'].'"><i class="fa fa-eye">&nbsp;</i>Postularr</a>';
+echo '<a data-toggle="modal" href="postular.php"  class="btn btn-primary btn-large" href="ver_alumno.php?id='.$row['id_oft'].'"><i class="fa fa-eye">&nbsp;</i>Postularr</a>';
 echo '</td>';
 echo '</tr>';
 }
 Database::disconnect();
 ?>
+
         </tbody>
     </table>
     </div>  

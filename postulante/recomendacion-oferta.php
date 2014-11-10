@@ -1,13 +1,7 @@
-<?php
-require("../config.php");
-if(empty($_SESSION['user'])) 
-{
-header("Location: ../index.php");
-die("Redirecting to index.php"); 
-}
+<?php 
 require('inc/header.php'); 
+require_once('../config.php');
 $_SESSION['clave']=$_COOKIE['pass'];
-$_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
       <?php
 require_once ('../database.php');
@@ -32,13 +26,14 @@ require_once ('../database.php');
     <table class="table">
         <thead>
             <tr> 
-                <th>LOGO</th>
-                <th>ID</th>
-                <th>RUC</th>
-                <th>NOMBRE DE LA EMPRESA</th>
-                <th>RUBRO</th>
-                <th>DIRECCION</th>
-                <th>TRAYECTORIA</th>
+            <th>Logo</th>
+            <th>Nombre de la Empresa</th>
+            <th>Fecha</th>
+            <th>Cargo</th>
+            <th>Lugar</th>
+            <th>Tipo</th>
+            <th>Categoria</th>
+            <th>Postular</th>
             </tr>
         </thead>
         <tbody>
@@ -54,9 +49,6 @@ require_once ('../database.php');
                 <td><?php echo $row['dir_emp']; ?></td>
                 <td><?php echo $row['Tray_emp']; ?></td>
                 <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">POSTULAR</button></td>
-
-
-
             </tr>
         <?php } ?>
         </tbody>
