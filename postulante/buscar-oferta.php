@@ -1,6 +1,6 @@
 <?php
-require ("../database.php");
-require("../config.php");
+require('../database.php');
+require('../config.php');
 if(empty($_SESSION['user'])) 
 {
 header("Location: ../index.php");
@@ -22,16 +22,16 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
         <div class="form-group">
             <select data-toggle="select" class="form-control select select-default">
     <option value="0">--SELECCIONAR--</option>
-            <?php 
-                $sql = "SELECT id_dep,nombre_dep FROM departamento_dep";
-                $stmt = $db->prepare($sql);
-                $result = $stmt->execute();
-                $data = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
-                foreach ($data as $k => $v) {
-                    printf('<option value="%d">%s</option>', $k, $v);
+                <?php 
+                $pdo = Database::connect();
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $sql = "SELECT * FROM departamento_dep";
+               foreach ($pdo->query($sql) as $row) {
+               echo '<option value="'.$row['id_dep'].'">'.$row['nom_dep'].'</option>';
                 }
+                Database::disconnect();
                 ?>
-            </select>
+         </select>
           </div>
   </div><!-- /.col-lg-6 --><div class="col-lg-6">
       <label class="title">Categoria:</label>
@@ -91,7 +91,8 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
         </thead>
         <tbody>
         <?php         
-
+$pdo = Database::connect();
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $sql = "SELECT * FROM Oferta_oft";
 foreach ($pdo->query($sql) as $row) {
 echo '<tr>';
