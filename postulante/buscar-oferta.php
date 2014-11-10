@@ -1,4 +1,5 @@
 <?php
+require ("../database.php");
 require("../config.php");
 if(empty($_SESSION['user'])) 
 {
@@ -21,6 +22,15 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
         <div class="form-group">
             <select data-toggle="select" class="form-control select select-default">
     <option value="0">--SELECCIONAR--</option>
+            <?php 
+                $sql = "SELECT id_dep,nombre_dep FROM departamento_dep";
+                $stmt = $db->prepare($sql);
+                $result = $stmt->execute();
+                $data = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+                foreach ($data as $k => $v) {
+                    printf('<option value="%d">%s</option>', $k, $v);
+                }
+                ?>
             </select>
           </div>
   </div><!-- /.col-lg-6 --><div class="col-lg-6">
@@ -81,9 +91,8 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
         </thead>
         <tbody>
         <?php         
-include ('../database.php');
-$pdo = Database::connect();
-$sql = 'SELECT * FROM Oferta_oft';
+
+$sql = "SELECT * FROM Oferta_oft";
 foreach ($pdo->query($sql) as $row) {
 echo '<tr>';
 echo '<td><img src="holder.js/40x40"></td>';
