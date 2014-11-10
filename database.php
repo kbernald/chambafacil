@@ -1,20 +1,38 @@
 <?php
-function dbConnect (){
-    $conn = null;
-    $host = 'localhost';
-    $db =   'dbchambafacil';
-    $user = 'root';
-    $pwd =  '';
-    try {
-        $conn = new PDO('mysql:host='.$host.';dbname='.$db.";charset=utf8", $user, $pwd);
-        //echo 'Connected succesfully.<br>';
-    }
-    catch (PDOException $e) {
-        echo '<p>Cannot connect to database !!</p>';
-        exit;
-    }
-    return $conn;
- }
- 
- ?>
+class Database 
+{
+    private static $dbName = 'dbchambafacil' ;
+    private static $dbHost = 'localhost' ;
+    private static $dbUsername = 'root';
+    private static $dbUserPassword = '';
+    private static $cont  = null;
 
+    public function __construct() {
+
+        die('Init function is not allowed');
+    }
+    
+    public static function connect()
+    {
+       // One connection through whole application
+       if ( null == self::$cont )
+       {      
+        try
+        {
+          self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName.";charset=utf8", self::$dbUsername, self::$dbUserPassword);  
+        }
+        catch(PDOException $e) 
+        {
+          die($e->getMessage());  
+        }
+       }
+       return self::$cont;
+    }
+
+    public static function disconnect()
+    {
+        self::$cont = null;
+    }
+}
+
+?>
