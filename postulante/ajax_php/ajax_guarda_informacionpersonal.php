@@ -1,5 +1,5 @@
 <?php
-require_once("../config.php");
+require_once("../../config.php");
 $idusuario = $_SESSION['id_usr'];
 $sql_usuario_verificacion="SELECT count(*) FROM informac_personal_infp WHERE idusr=$idusuario";
 $result = $db->query($sql_usuario_verificacion);
@@ -53,7 +53,7 @@ $query_params=array(
 ':id_dist'=>$cbo_distrito,
 ':Direccion_usr'=>$direccion
 );
-    
+ echo "Se registro correctamente";
 try {  
             $stmt = $db->prepare($sql); 
             $result = $stmt->execute($query_params); 
@@ -62,4 +62,5 @@ try {
         catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
 
 }
+
 ?>

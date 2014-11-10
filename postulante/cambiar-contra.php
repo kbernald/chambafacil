@@ -10,7 +10,7 @@ $_SESSION['clave']=$_COOKIE['pass'];
 $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
 <!--CONTENIDO-->
-    
+
      <form method="post" action="ajax_php/ajax_guarda_informacionpersonal.php">
      <h3>Informaci&oacute;n Personal</h3> 
    <div class="row">

@@ -9,41 +9,26 @@ require('inc/header.php');
 $_SESSION['clave']=$_COOKIE['pass'];
 $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
 ?>
-<!-- CONTENIDO -->
-
-     <form method="post" action="">
-     <h3>Experiencias Laborales</h3> 
+<!-- CONTENIDO --> <form method="post" action="">
+     <h3>Grado de Estudio</h3> 
      <div class="row">
   <div class="col-lg-6">
-      <label class="title">Titulo / Puesto:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
-  </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-       <label class="title">Nomb. de la Empresa:<span class="required">*</span></label>
-        <input type="text" placeholder="..." class="form-control" />
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->        
-     
-         <div class="row">
-  <div class="col-lg-6">
-      <label class="title">Fecha de Inicio:<span class="required">*</span></label>
-        <input type="text" class="form-control" value="MM/DD/AA" data-date-format="mm/dd/yy">
-  </div><!-- /.col-lg-6 -->
-   <div class="col-lg-6">
-       <label class="title">Fecha de Fin:<span class="required">*</span></label>
-        <input type="text" class="form-control" value="MM/DD/AA" data-date-format="mm/dd/yy">
-  </div><!-- /.col-lg-6 -->
-</div><!-- /.row -->     
-      <div class="row">
-  <div class="col-lg-6">
-      <label class="title">Area:<span class="required">*</span></label>
-        <div class="form-group">
+      <label class="title">Estudio realizado:<span class="required">*</span></label>
+         <div class="form-group">
             <select data-toggle="select" class="form-control select select-default">
     <option value="0">--SELECCIONAR--</option>
             </select>
           </div>
   </div><!-- /.col-lg-6 -->
    <div class="col-lg-6">
+       <label class="title">Especialidad:<span class="required">*</span></label>
+        <input type="text" placeholder="" class="form-control" />
+  </div><!-- /.col-lg-6 -->
+  </div><!-- /.row -->      
+         
+         <div class="row">
+  <div class="col-lg-6">
+      <label class="title">Nombre del Instituto:<span cl
        <label class="title">Cargo:<span class="required">*</span></label>
         <div class="form-group">
             <select data-toggle="select" class="form-control select select-default">
