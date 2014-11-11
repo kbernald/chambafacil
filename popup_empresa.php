@@ -107,7 +107,7 @@
                         
                         
 <!-- Nav tabs -->
-<ul class="nav nav-pills" role="tablist">
+<ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Iniciar Sesión</a></li>
   <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Registrarte</a></li>
 </ul>
@@ -119,21 +119,21 @@
 
       
             
-                <form action="index.php"  class="tab-pane" method="post">
-                    <div class="login-form">
-                        <div class="form-group">
+                 <form role="form" action="index.php"  class="tab-pane" method="post">
+                   
+                      <div class="form-group">
+                          <label for="exampleInputEmail1">Correo Electronico:</label>
                             <input name="email" type="text" class="form-control login-field" value="" placeholder="Ingresa tu correo" id="login-name">
-                            <label class="login-field-icon fui-user" for="login-name"></label>
                         </div>
 
                         <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña:</label>
                             <input name="password" type="password" class="form-control login-field" value="" placeholder="Contraseña" id="login-pass">
 							<input type="hidden" name="pass" value=""/>
-                            <label class="login-field-icon fui-lock" for="login-pass"></label>
                         </div>
                         
                          
-                        <a class="login-link" href="#">¿Olvidaste tu contraseña?</a>
+                        <a href="#">¿Olvidaste tu contraseña?</a>
                          <div class="modal-footer">
                         <input type="submit" id="logeo" class="btn btn-info" value="Iniciar"/>
                     </div>
