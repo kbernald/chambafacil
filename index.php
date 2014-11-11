@@ -7,7 +7,7 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
     require_once ("config.php"); 
     $submitted_email= ''; 
     if(!empty($_POST)){ 
-        $query = " SELECT id_usr, Pass_usr, semilla, Email_usr FROM usuario_usr WHERE Email_usr = :email "; 
+        $query = " SELECT id_usr, Pass_usr, semilla, Email_usr,id_tip FROM usuario_usr WHERE Email_usr = :email "; 
         $query_params = array( 
             ':email' => $_POST['email'] 
         ); 
@@ -30,13 +30,18 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
                 $login_ok = true;
             } 
         } 
-	
+		$tip_usuario=$row['id_tip'];
         if($login_ok){ 
             unset($row['semilla']); 
             unset($row['Pass_usr']);
-            $_SESSION['user'] = $row;  
+            $_SESSION['user'] = $row; 
+if($tip_usuario===2 || $tip_usuario==='2'){			
             header("Location: postulante"); 
-            die("Redirecting to: postulante"); 
+            die("Redirecting to: postulante");}
+else if($tip_usuario===1 || $tip_usuario==='1'){
+header("Location: empresa"); 
+            die("Redirecting to: empresa");
+			}			
         } 
         else{ 
             header("Location: error_login.php"); 
