@@ -288,6 +288,7 @@ $(document).ready(function () {
       <!-- /END THE FEATURETTES -->
 <?php 
 require ('popup_postulante.php');  //LLAMA AL BOTON POSTULAR  
+require ('popup_empresa.php');  //LLAMA AL BOTON POSTULAR  
 
 ?>
 
