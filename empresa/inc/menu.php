@@ -40,7 +40,7 @@
                         <li class="dropdown">
                             <!-- Button trigger modal -->
                             <div class="btn-group">
-  <button class="btn btn-inverse navbar-btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-user">&nbsp;</i>
+  <button class="btn btn-inverse navbar-btn dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-building">&nbsp;</i>
    <?php echo htmlentities($_SESSION['user']['Email_usr'], ENT_QUOTES, 'UTF-8'); ?> <span class="caret"></span>
   </button>
   <ul class="dropdown-menu dropdown-menu-inverse" role="menu">
