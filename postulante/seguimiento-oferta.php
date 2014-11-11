@@ -23,9 +23,9 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
                 <?php 
                 $pdo = Database::connect();
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                $sql = "SELECT * FROM distrito_dist";
+                $sql = "SELECT * FROM ciudad_ciu";
                foreach ($pdo->query($sql) as $row) {
-               echo '<option value="'.$row['id_dist'].'">'.$row['distritonom'].'</option>';
+               echo '<option value="'.$row['id_ciu'].'">'.$row['nom_prov'].'</option>';
                 }
                 Database::disconnect();
                 ?>
