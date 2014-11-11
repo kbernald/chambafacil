@@ -1,5 +1,6 @@
 <?php
-require("../config.php");
+require('../database.php');
+require('../config.php');
 if(empty($_SESSION['user'])) 
 {
 header("Location: ../index.php");
@@ -17,12 +18,20 @@ $_SESSION['id_usr']=$_SESSION['user']['id_usr'];
           <div class="col-lg-6">
               <label class="title">Distrito:</label>
                 <div class="form-group">
-            <select id='sexo' name='sexo' data-toggle="select" class="form-control select select-default">
-                <option value="0">--SELECCIONAR--</option>
-            </select>
+            <select data-toggle="select" class="form-control select select-default">
+    <option value="0">--SELECCIONAR--</option>
+                <?php 
+                $pdo = Database::connect();
+                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                $sql = "SELECT * FROM distrito_dist";
+               foreach ($pdo->query($sql) as $row) {
+               echo '<option value="'.$row['id_dist'].'">'.$row['distritonom'].'</option>';
+                }
+                Database::disconnect();
+                ?>
+         </select>
           </div>
-          </div><!-- /.col-lg-6 -->
-           <div class="col-lg-6">
+          </div><!-- /.col-lg-6 --><div class="col-lg-6">
                <label class="title">Perfil:</label>
                 <div class="form-group">
             <select id='sexo' name='sexo' data-toggle="select" class="form-control select select-default">
