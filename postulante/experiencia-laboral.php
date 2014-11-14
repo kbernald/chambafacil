@@ -82,7 +82,7 @@ $row = $result_2->fetchAll();
     <table class="table">
         <thead>
             <tr>
-                <th>#</th>
+                <!--<th>#</th>-->
                 <th>Puesto</th>
                 <th>Empresa</th>
                 <th>Fecha Inicio</th>
@@ -97,9 +97,7 @@ $row = $result_2->fetchAll();
         <tbody>
 <?php
 foreach ($row as $row_table) {
-    $j=$i+1;
-    echo '<tr>
-            <td>'.$j.'</td>
+            echo '<tr>
             <td>'.$row_table['experiencia_laboralcol'].'</td>
             <td>'.$row_table['institucion_empresa'].'</td>
             <td>'.$row_table['fech_ini'].'</td>
@@ -109,6 +107,7 @@ foreach ($row as $row_table) {
             <td><button type="button" class="btn btn-info"><i class="fa fa-file-pdf-o"></i></button></td>
             <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
             <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td></tr>';
+
 }
 ?>
         </tbody>
