@@ -5,9 +5,14 @@ $idusuario = $_SESSION['id_usr'];
 $sql_usuario_verificacion = "SELECT count(*) FROM informac_personal_infp WHERE idusr=$idusuario";
 $result = $db->query($sql_usuario_verificacion);
 $row = $result->fetch(PDO::FETCH_NUM);
-if ($row[0] === 0|| $row[0]==='0') {
-    $nombre = $_POST['nombre'];
+
+if ($row[0] === 0 || $row[0] === '0') {
+
+
+
     
+    $nombre = $_POST['nombre'];
+
     $ape_pat = $_POST['ape_pat'];
     $ape_mat = $_POST['ape_mat'];
     $direccion = $_POST['direccion'];
@@ -33,9 +38,9 @@ if ($row[0] === 0|| $row[0]==='0') {
     $pais_nac = $_POST['pais_nac'];
     $idusr = $_SESSION['id_usr'];
     $sql = "INSERT INTO informac_personal_infp(
-id_tipdoc,num_doc,Nombre_usr,Apel_pat_usr,Apel_mat_usr,Sex_usr,fec_nac_usr,Tel_celular_usr,Tel_fijo_usr,id_dep,id_prov,id_dist,Direccion_usr,id_sitlab,id_paisnac,idusr)
+id_tipdoc,num_doc,Nombre_usr,Apel_pat_usr,Apel_mat_usr,Sex_usr,fec_nac_usr,Tel_celular_usr,Tel_fijo_usr,id_dep,id_prov,id_dist,Direccion_usr,id_sitlab,id_paisnac,idusr,foto)
 VALUES(
-:id_tipdoc,:num_doc,:Nombre_usr,:Apel_pat_usr,:Apel_mat_usr,:Sex_usr,:fec_nac_usr,:Tel_celular_usr,:Tel_fijo_usr,:id_dep,:id_ciu,:id_dist,:Direccion_usr,:id_sitlab,:id_paisnac,:idusr);";
+:id_tipdoc,:num_doc,:Nombre_usr,:Apel_pat_usr,:Apel_mat_usr,:Sex_usr,:fec_nac_usr,:Tel_celular_usr,:Tel_fijo_usr,:id_dep,:id_ciu,:id_dist,:Direccion_usr,:id_sitlab,:id_paisnac,:idusr,:foto);";
     $query_params = array(
         ':id_paisnac' => $pais_nac,
         ':idusr' => $idusr,
@@ -52,9 +57,9 @@ VALUES(
         ':id_dep' => $cbo_departamento,
         ':id_ciu' => $cbo_provincia,
         ':id_dist' => $cbo_distrito,
-        ':Direccion_usr' => $direccion
+        ':Direccion_usr' => $direccion,
+        ':foto' => $nombreImagen
     );
-    echo "Se registro correctamente";
     try {
         $stmt = $db->prepare($sql);
         $result = $stmt->execute($query_params);
@@ -63,8 +68,7 @@ VALUES(
     } catch (PDOException $ex) {
         die("Failed to run query: " . $ex->getMessage());
     }
-}
-elseif($row[0]>1 || $row[0]!=0){
+} elseif ($row[0] > 1 || $row[0] != 0) {
     header("Location: ../informacionpersonal.php");
 }
 ?>

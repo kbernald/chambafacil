@@ -40,6 +40,7 @@ $(document).ready(function () {
 		document.cookie="pass="+password;
 
 	});
+        
             
 });
         
