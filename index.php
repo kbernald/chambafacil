@@ -50,54 +50,54 @@ if (!empty($_POST)) {
         $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8');
     }
 }
-=======
-<?php 
-    require_once ("config.php"); 
-    $submitted_email= ''; 
-    if(!empty($_POST)){ 
-        $query = " SELECT id_usr, Pass_usr, semilla, Email_usr,id_tip FROM usuario_usr WHERE Email_usr = :email "; 
-        $query_params = array( 
-            ':email' => $_POST['email'] 
-        ); 
-         
-        try{ 
-            $stmt = $db->prepare($query); 
-            $result = $stmt->execute($query_params); 
-        } 
-        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
-        $login_ok = false; 
-        $row = $stmt->fetch(); 
-        if($row){ 
-            $check_password = hash('sha256', $_POST['password'] . $row['semilla']); 
-			
-            for($round = 0; $round < 65536; $round++){
-                $check_password = hash('sha256', $check_password . $row['semilla']);
-            } 
-			
-            if($check_password === $row['Pass_usr']){
-                $login_ok = true;
-            } 
-        } 
-		$tip_usuario=$row['id_tip'];
-        if($login_ok){ 
-            unset($row['semilla']); 
-            unset($row['Pass_usr']);
-            $_SESSION['user'] = $row; 
-if($tip_usuario===2 || $tip_usuario==='2'){			
-            header("Location: postulante/"); 
-            die("Redirecting to: postulante/");}
-else if($tip_usuario===1 || $tip_usuario==='1'){
-header("Location: empresa/"); 
-            die("Redirecting to: empresa/");
-			}			
-        } 
-        else{ 
-            header("Location: error_login.php"); 
-            die("Redirecting to: error_login.php");
-            $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8'); 
-        } 
-    } 
->>>>>>> origin/master
+
+ 
+//    require_once ("config.php"); 
+//    $submitted_email= ''; 
+//    if(!empty($_POST)){ 
+//        $query = " SELECT id_usr, Pass_usr, semilla, Email_usr,id_tip FROM usuario_usr WHERE Email_usr = :email "; 
+//        $query_params = array( 
+//            ':email' => $_POST['email'] 
+//        ); 
+//         
+//        try{ 
+//            $stmt = $db->prepare($query); 
+//            $result = $stmt->execute($query_params); 
+//        } 
+//        catch(PDOException $ex){ die("Failed to run query: " . $ex->getMessage()); } 
+//        $login_ok = false; 
+//        $row = $stmt->fetch(); 
+//        if($row){ 
+//            $check_password = hash('sha256', $_POST['password'] . $row['semilla']); 
+//			
+//            for($round = 0; $round < 65536; $round++){
+//                $check_password = hash('sha256', $check_password . $row['semilla']);
+//            } 
+//			
+//            if($check_password === $row['Pass_usr']){
+//                $login_ok = true;
+//            } 
+//        } 
+//		$tip_usuario=$row['id_tip'];
+//        if($login_ok){ 
+//            unset($row['semilla']); 
+//            unset($row['Pass_usr']);
+//            $_SESSION['user'] = $row; 
+//if($tip_usuario===2 || $tip_usuario==='2'){			
+//            header("Location: postulante/"); 
+//            die("Redirecting to: postulante/");}
+//else if($tip_usuario===1 || $tip_usuario==='1'){
+//header("Location: empresa/"); 
+//            die("Redirecting to: empresa/");
+//			}			
+//        } 
+//        else{ 
+//            header("Location: error_login.php"); 
+//            die("Redirecting to: error_login.php");
+//            $submitted_email = htmlentities($_POST['email'], ENT_QUOTES, 'UTF-8'); 
+//        } 
+//    } 
+//>>>>>>> origin/master
 ?>
 <!DOCTYPE html>
 <html>
