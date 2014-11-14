@@ -248,10 +248,15 @@ if ($row_verificacion[0] === 1 || $row_verificacion[0] === '1') {
             <label class="title">Situacion Actual:<span class="required">*</span></label>
             <div class="form-group">
                 <select id='sit_actual' name='sit_actual' data-toggle="select" class="form-control select select-default">
-                    <option value="0">Seleccionar</option>
-                    <option value="1">Trabajador Dependiente</option>
-                    <option value="2">Trabajador Independiente</option>
-                    <option value="3">Desempleado</option>
+                    <option value="0">--SELECCIONAR--</option>
+                    <?php 
+                    $sql = "SELECT id_sitlab,Desc_sitlab FROM situacion_laboral_sitlab";
+                    $stmt = $db->prepare($sql);
+                    $result = $stmt->execute();
+                    $data = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
+                    foreach ($data as $k => $v) {
+                        printf ('<option value="%d">%s</option>', $k, $v);
+                    } ?>
                 </select>
             </div>
         </div><!-- /.col-lg-6 -->
