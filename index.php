@@ -36,11 +36,11 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
             unset($row['Pass_usr']);
             $_SESSION['user'] = $row; 
 if($tip_usuario===2 || $tip_usuario==='2'){			
-            header("Location: postulante"); 
-            die("Redirecting to: postulante");}
+            header("Location: postulante/"); 
+            die("Redirecting to: postulante/");}
 else if($tip_usuario===1 || $tip_usuario==='1'){
-header("Location: empresa"); 
-            die("Redirecting to: empresa");
+header("Location: empresa/"); 
+            die("Redirecting to: empresa/");
 			}			
         } 
         else{ 
@@ -116,7 +116,7 @@ $(document).ready(function () {
 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-colleapse-1">
                    <!-- <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Inicio</a></li>
                         
