@@ -12,10 +12,11 @@ $sql_contador = "SELECT COUNT(*) FROM experiencia_laboral WHERE id_usu=$idusuari
 $result = $db->query($sql_contador);
 $row_contador = $result->fetch(PDO::FETCH_NUM);
 
-
-$sql_lista = "SELECT * FROM experiencia_laboral WHERE id_usu=$idusuario";
-$result = $db->query($sql_contador);
-$row = $result->fetch(PDO::FETCH_NUM);
+$sql_lista = "SELECT id_explab, id_usu, id_perfil, id_area, institucion_empresa,
+         funciones, fech_ini, fech_fin, Contacto, num_contacto, Moti_fin,
+         Documentor, experiencia_laboralcol FROM experiencia_laboral WHERE id_usu=$idusuario ORDER BY id_explab";
+$result_2 = $db->query($sql_lista);
+$row = $result_2->fetchAll();
 ?>
 <!-- CONTENIDO --> 
 
@@ -35,11 +36,11 @@ $row = $result->fetch(PDO::FETCH_NUM);
     <div class="row">
         <div class="col-lg-6">
             <label class="title">Fecha Inicio:<span class="required">*</span></label>
-            <input type="text" class="form-control" name="fecha_inicio" value="02/16/12" data-date-format="dd/mm/yyyy" name='dp2' id="dp2">
+            <input type="text" class="form-control" name="fecha_inicio" value="14/11/2014" data-date-format="dd/mm/yyyy" name='dp2' id="dp2">
         </div><!-- /.col-lg-6 -->
         <div class="col-lg-6">
             <label class="title">Fecha Fin:<span class="required">*</span></label>
-            <input type="text" class="form-control" name="fecha_fin" value="02/16/12" data-date-format="dd/mm/yyyyy" name='dp3' id="dp3">
+            <input type="text" class="form-control" name="fecha_fin" value="14/11/2014" data-date-format="dd/mm/yyyy" name='dp3' id="dp3">
         </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->     
     <div class="row">
@@ -68,7 +69,9 @@ $row = $result->fetch(PDO::FETCH_NUM);
             </div>
         </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->       
-    <button data-toggle="dropdown" class="btn btn-danger" type="submit"><i class="fa fa-plus-circle">&nbsp;</i>Agregar información</button>
+<!--    <button data-toggle="dropdown" class="btn btn-danger" type="submit"><i class="fa fa-plus-circle">&nbsp;</i>Agregar información</button>-->
+<button  type="submit" id='save_datos' name='save_datos' class="btn btn-danger"><i class="fa fa-plus-circle">&nbsp;</i>Agregar información</button>&nbsp;&nbsp;
+    
 </form>
 <p>&nbsp;</p>
 <div class="panel panel-default">
@@ -93,19 +96,19 @@ $row = $result->fetch(PDO::FETCH_NUM);
         </thead>
         <tbody>
 <?php
-for ($i = 0; $i > (int) $row_contador[0]; $i++) {
+foreach ($row as $row_table) {
+    $j=$i+1;
     echo '<tr>
-            <td>1</td>
-            <td>'.$row[10].'</td>
-            <td>Ladrillos Rex</td>
-            <td>18/09/2001</td>
-            <td>30/10/2001</td>
+            <td>'.$j.'</td>
+            <td>'.$row_table['experiencia_laboralcol'].'</td>
+            <td>'.$row_table['institucion_empresa'].'</td>
+            <td>'.$row_table['fech_ini'].'</td>
+            <td>'.$row_table['fech_fin'].'</td>
             <td>Recursos Humanos</td>
             <td>Administracion</td>
             <td><button type="button" class="btn btn-info"><i class="fa fa-file-pdf-o"></i></button></td>
             <td><button type="button" class="btn btn-warning"><i class="fa fa-edit"></i></button></td>
-            <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td>
-          </tr>';
+            <td><button type="button" class="btn btn-danger"><i class="fa fa-minus-square"></i></button></td></tr>';
 }
 ?>
         </tbody>
