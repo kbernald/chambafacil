@@ -10,6 +10,7 @@ $metaD = "¿Buscas trabajo? aqui es muy facil";
         $query = " SELECT id_usr, Pass_usr, semilla, Email_usr,id_tip FROM usuario_usr WHERE Email_usr = :email "; 
         $query_params = array( 
             ':email' => $_POST['email'] 
+			
         ); 
          
         try{ 
