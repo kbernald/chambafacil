@@ -3,7 +3,7 @@ $page = "home";
 $title = "Chambafacil";
 $metaD = "¿Buscas trabajo? aqui es muy facil";
 ?>
-<<<<<<< HEAD
+
 <?php
 require_once ("config.php");
 $submitted_email = '';
@@ -168,7 +168,7 @@ if (isset($metaD) && !empty($metaD)) {
 
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
-<<<<<<< HEAD
+
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <!-- <ul class="nav navbar-nav">
                          <li class="active"><a href="#">Inicio</a></li>
@@ -186,7 +186,7 @@ if (isset($metaD) && !empty($metaD)) {
                              </ul>
                          </li>
                      </ul> --> 
-=======
+
                 <div class="collapse navbar-collapse" id="bs-example-navbar-colleapse-1">
                    <!-- <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Inicio</a></li>
@@ -204,7 +204,7 @@ if (isset($metaD) && !empty($metaD)) {
                             </ul>
                         </li>
                     </ul> --> 
->>>>>>> origin/master
+
 
                     <ul class="nav navbar-nav navbar-right">
 

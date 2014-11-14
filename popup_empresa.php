@@ -69,9 +69,9 @@
 			':id_tip'=>$idtip
         ); 
         try {  
-            $stmt = $db->prepare($query); 
-            $result = $stmt->execute($query_params); 
-					$subject = "Bienvenido a Chambafacil";
+        $stmt = $db->prepare($query); 
+        $result = $stmt->execute($query_params); 
+		$subject = "Bienvenido a Chambafacil";
 		$headers = "From: info@chambafacil.com \r\n";
 		$headers.= "Reply-to: info@chambafacil.com \r\n";
 		$headers.= "X-Mailer: PHP/" . phpversion() . " \r\n";
@@ -107,14 +107,10 @@
                         
                         
 <!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#home" role="tab" data-toggle="tab">Iniciar Sesión</a></li>
-  <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">Registrarte</a></li>
-</ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="home">
+<div class="content">
+  <p>Iniciar Sesión</p>
   
 
       
@@ -135,10 +131,13 @@
                          
                         <a href="#">¿Olvidaste tu contraseña?</a>
                          <div class="modal-footer">
-                        <input type="submit" id="logeo" class="btn btn-info" value="Iniciar"/>
+                         <input type="submit" id="logeo" class="btn btn-info" value="Iniciar"/>
+                         </form>
+                         <a href="registro_empresa.php"><button class="btn btn-danger" />Registrarte</button></a>
+                        
                     </div>
                     </div>
-               </form>
+               
 
       
       
